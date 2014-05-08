@@ -1,11 +1,9 @@
-﻿
+﻿using System;
+using System.Runtime.InteropServices;
+using System.Data;
+using System.IO;
+
 namespace DPIAccessClass
-{
-    using System;
-    using System.Runtime.InteropServices;
-    using System.Data;
-    using System.IO;
-    namespace Minfin.Visitas
     {
         public class Tarjeta
         {
@@ -38,7 +36,7 @@ namespace DPIAccessClass
         }
         public class lectura
         {
-            public TarjetaEntity lecturaTarjeta()
+            public Object lecturaTarjeta()
             {
                 TarjetaEntity tarjetaEntity = new TarjetaEntity();
                 try
@@ -112,7 +110,6 @@ namespace DPIAccessClass
                     tarjetaEntity.oficial_activo = Editables.Substring(300, 1);
                     tarjetaEntity.imagen = numArray;
 
-
                 }
                 catch (Exception ex)
                 {
@@ -122,4 +119,4 @@ namespace DPIAccessClass
             }
         }
     }
-}
+
